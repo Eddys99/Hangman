@@ -50,7 +50,7 @@ function checkCharacter(idOfClickedLetter) {
         createElement.textContent = "Play again";
         createHere.appendChild(createElement);  
     }
-    if(tries == 0) {
+    if (tries == 0) {
         var removeElement = document.getElementById("guessWord");
         removeElement.remove();
         document.getElementById("message").innerHTML = "<h2> Oops, you lost. </h2>";
