@@ -1,0 +1,21 @@
+#introduceWord {
+    padding-left: 500px;
+    padding-right: 500px;
+}
+.btn-primary {
+    margin-top: 15px;
+}
+.btn-secondary {
+    margin: 5px;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+    margin: 5px;
+    font-size: 50px;
+}
+#tries {
+    margin-top: 20px;
+}
