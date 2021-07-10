@@ -40,27 +40,35 @@ function checkCharacter(idOfClickedLetter) {
         document.getElementById("tries").innerHTML = "<h4> Tries: </h4>" + tries;
     }
     if (charactersFound == wordSize) {
-        var removeElement = document.getElementById("guessWord");
-        removeElement.remove();
-        document.getElementById("message").innerHTML = "<h2> Congrats, you won! </h2>";
-        var createElement = document.createElement('button');
-        var createHere = document.getElementById("message");
-        createElement.setAttribute("class", "btn btn-success");
-        createElement.setAttribute("onclick", "restartGame()");
-        createElement.textContent = "Play again";
-        createHere.appendChild(createElement);  
+        gameWon();
     }
     if (tries == 0) {
-        var removeElement = document.getElementById("guessWord");
-        removeElement.remove();
-        document.getElementById("message").innerHTML = "<h2> Oops, you lost. </h2>";
-        var createElement = document.createElement('button');
-        var createHere = document.getElementById("message");
-        createElement.setAttribute("class", "btn btn-danger");
-        createElement.setAttribute("onclick", "restartGame()");
-        createElement.textContent = "Play again";
-        createHere.appendChild(createElement);  
+        gameLost();
     }
+}
+
+function gameWon() {
+    var removeElement = document.getElementById("guessWord");
+    removeElement.remove();
+    document.getElementById("message").innerHTML = "<h2> Congrats, you won! </h2>";
+    var createElement = document.createElement('button');
+    var createHere = document.getElementById("message");
+    createElement.setAttribute("class", "btn btn-success");
+    createElement.setAttribute("onclick", "restartGame()");
+    createElement.textContent = "Play again";
+    createHere.appendChild(createElement);  
+}
+
+function gameLost() {
+    var removeElement = document.getElementById("guessWord");
+    removeElement.remove();
+    document.getElementById("message").innerHTML = "<h2> Oops, you lost. </h2>";
+    var createElement = document.createElement('button');
+    var createHere = document.getElementById("message");
+    createElement.setAttribute("class", "btn btn-danger");
+    createElement.setAttribute("onclick", "restartGame()");
+    createElement.textContent = "Play again";
+    createHere.appendChild(createElement);
 }
 
 function restartGame() {
